@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
-const { Post, User, Comment, Tag, Category, PostTag } = require("../../models");
+const { Post, User, Comment } = require("../../models");
 const withAuth = require('../../utils/auth');
 
 
@@ -82,8 +82,6 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         post_text: req.body.post_text,
         post_title: req.body.post_title,
-        category_id: req.body.category_id,
-        tag_id: req.body.tag_id,
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))

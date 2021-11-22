@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Tag, Category, PostTag } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //GET all users without password
@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'post_title','post_text', 'category_id', 'tag_id', 'created_at']
+                attributes: ['id', 'post_title','post_text', 'created_at']
             },
             {
                 model: Comment,

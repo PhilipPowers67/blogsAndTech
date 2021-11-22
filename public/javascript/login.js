@@ -13,7 +13,7 @@ async function loginFormHandler(event) {
         headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
-          document.location.replace("/profile");
+          document.location.replace("/dashboard");
         } else {
           alert(response.statusText);
         }
@@ -40,7 +40,7 @@ async function loginFormHandler(event) {
           document.location === "http://project2.herokuapp.com/login" ||
           "localhost:3001/login"
         ) {
-          document.location.replace("/profile");
+          document.location.replace("/dashboard");
         } else {
           alert(response.statusText);
         }
