@@ -4,11 +4,11 @@ async function loginFormHandler(event) {
     const password = document.querySelector("#password-login").value.trim();
   
     if (email && password) {
-      const response = await fetch("/api/users/login", {
-        method: "post",
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
         body: JSON.stringify({
           email,
-          password,
+          password
         }),
         headers: { "Content-Type": "application/json" },
       });
@@ -20,6 +20,7 @@ async function loginFormHandler(event) {
       }
     }
   
+  
   async function signupFormHandler(event) {
     event.preventDefault();
     const username = document.querySelector("#username-signup").value.trim();
@@ -30,23 +31,22 @@ async function loginFormHandler(event) {
         method: "post",
         body: JSON.stringify({
           email,
-          password,
-          username,
+          password
         }),
         headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
-        if (
-          document.location === "http://project2.herokuapp.com/login" ||
-          "localhost:3001/login"
-        ) {
+        // if (
+        //   document.location === "http://project2.herokuapp.com/login" ||
+        //   "localhost:3001/login"
+        // ) {
           document.location.replace("/dashboard");
         } else {
           alert(response.statusText);
         }
       }
     }
-  }
+  // }
   document
     .querySelector(".login-form")
     .addEventListener("submit", loginFormHandler);
