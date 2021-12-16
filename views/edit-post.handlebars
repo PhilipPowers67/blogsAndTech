@@ -1,9 +1,19 @@
-<div>
-    <h2>Edit Post</h2>
-    <form>
-        <label for="post_title">Title</label>
-        <label for="post_text">Text</label>
-        <button type="submit">Update Post</button>
-    </form>
-</div>
-<script src="/javascript/edit-post.js"></script>
+<article>
+  <a href="/dashboard"> &larr; Back to Dashboard</a>
+  <h2>Edit Post</h2>
+  <form class="edit-post-form">
+    <div class="post-title-section">
+      <label for="post_title">Title</label>
+      <input name="post_title" type="text" value="{{post_title}}" />
+    </div>
+    <div class="post-text-section">
+      <label for="post_text">Text</label>
+      <input name="post_text" type="text" value="{{post_text}}" />
+    </div>
+
+    <button type="submit">Update Post</button>
+  </form>
+</article>
+{{#if loggedIn}}
+  <script src="/javascript/edit-post.js"></script>
+{{/if}}
