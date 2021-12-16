@@ -5,7 +5,7 @@ async function loginFormHandler(event) {
   
     if (email && password) {
       const response = await fetch('/api/users/login', {
-        method: 'POST',
+        method: 'post',
         body: JSON.stringify({
           email,
           password
@@ -13,7 +13,7 @@ async function loginFormHandler(event) {
         headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
-          document.location.replace("/dashboard");
+          document.location.replace('/dashboard/');
         } else {
           alert(response.statusText);
         }
@@ -30,23 +30,20 @@ async function loginFormHandler(event) {
       const response = await fetch("/api/users", {
         method: "post",
         body: JSON.stringify({
+          username,
           email,
           password
         }),
         headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
-        // if (
-        //   document.location === "http://project2.herokuapp.com/login" ||
-        //   "localhost:3001/login"
-        // ) {
-          document.location.replace("/dashboard");
+          document.location.replace("/dashboard/");
         } else {
           alert(response.statusText);
         }
       }
     }
-  // }
+    
   document
     .querySelector(".login-form")
     .addEventListener("submit", loginFormHandler);
