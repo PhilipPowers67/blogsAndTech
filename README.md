@@ -18,8 +18,8 @@ Using Models, Views, and Controllers users are able to create an account and lat
 * Comment on other discussions or threads
 * Log out
 ### Screenshot
-![Screenshot](assets/Blogs-and-Tech-dashboard.png)
-![Screenshot](assets/Blogs-and-Tech-dashboard-with-post.png)
-![Screenshot](assets/Blogs-and-Tech-homepage.png)
-![Screenshot](assets/Blogs-and-Tech-landing-page.png)
-![Screenshot](assets/Blogs-and-Tech-login-signup-page.png)
+![Screenshot](assets/ScreenShots/Blogs-and-Tech-dashboard.png)
+![Screenshot](assets/ScreenShots/Blogs-and-Tech-dashboard-with-post.png)
+![Screenshot](assets/ScreenShots/Blogs-and-Tech-homepage.png)
+![Screenshot](assets/ScreenShots/Blogs-and-Tech-landing-page.png)
+![Screenshot](assets/ScreenShots/Blogs-and-Tech-login-signup-page.png)
